@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
     instructionsform: {
         marginTop: theme.spacing(1),
         marginBottom: theme.spacing(1),
-        marginRight: '5%',
-        marginLeft: '5%',
+        marginRight: '10%',
+        marginLeft: '20%',
     },
     floatright: {
         float: 'right'
