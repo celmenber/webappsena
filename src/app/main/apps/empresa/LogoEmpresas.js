@@ -55,7 +55,7 @@ export default function LogoEmpresas() {
         if (!file) {
             return;
         }
-        console.log(file)
+      //  console.log(file)
         const reader = new FileReader();
         reader.readAsBinaryString(file);
 

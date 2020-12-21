@@ -244,24 +244,6 @@ function ContactDialog(props) {
 							fullWidth
 						/>
 					</div>
-
-					{/* <div className="flex">
-						<div className="min-w-48 pt-20">
-							<Icon color="action">note</Icon>
-						</div>
-						<TextField
-							className="mb-24"
-							label="Notes"
-							id="notes"
-							name="notes"
-							value={form.notes}
-							onChange={handleChange}
-							variant="outlined"
-							multiline
-							rows={5}
-							fullWidth
-						/>
-					</div> */}
 				</DialogContent>
 
 				{contactDialog.type === 'new' ? (

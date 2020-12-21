@@ -16,6 +16,7 @@ import DatosEmpresa from './DatosEmpresas';
 import DefinicionEmpresa from './DefinicionEmpresas';
 import ModelonegEmpresa from './ModelonegEmpresas';
 import LogoEmpresa from './LogoEmpresas';
+import DialogoEmpresa  from './DialogoEmpresa';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -59,8 +60,7 @@ function getSteps() {
         '¿ solo falta el logotipo de la Empresa ?',
     ];
 }
-
-function getStepContent(stepIndex) {
+ function getStepContent(stepIndex) {
     switch (stepIndex) {
         case 0:
             return <GoesEmpresa />
@@ -79,7 +79,7 @@ function getStepContent(stepIndex) {
         default:
             return 'Unknown stepIndex';
     }
-}
+} 
 
 function getStepTexto(stepIndex) {
     switch (stepIndex) {
@@ -180,15 +180,49 @@ export default function HorizontalLabelPositionBelowStepper() {
             <div>
                 {activeStep === steps.length ? (
                     <div>
-                        <Typography className={classes.instructions}>
+                        <DialogoEmpresa />
+                        <Typography component="div" className={classes.instructions}>
                             <Typography variant="overline" display="block" className="MuiCardContent-root flex flex-col items-center justify-center p-32 text-center">
                                 Felicidades tu empresa ya esta creada
                          </Typography>
-                         <Typography variant="overline" display="block" className="MuiCardContent-root flex flex-col items-center justify-center p-32 text-center">
+                            <div>
+                                <Fab
+                                    disabled={activeStep === 0}
+                                    onClick={handleBack}
+                                    size="small"
+                                    color="primary"
+                                    aria-label="add"
+                                    className={classes.floatleft}>
+                                    <Icon>arrow_left</Icon>
+                                </Fab>
+                                <Fab
+                                    disabled={activeStep === 7}
+                                    onClick={handleNext}
+                                    size="small"
+                                    color="primary"
+                                    aria-label="add"
+                                    className={classes.floatright}
+                                >
+                                    {activeStep === steps.length - 1 ? <Icon>arrow_right</Icon> : <Icon>arrow_right</Icon>}
+                                </Fab>
+                            </div>
+                                     <Typography variant="overline" display="block" className="MuiCardContent-root flex flex-col items-center justify-center p-32 text-center">
                                     <img className="w-256" src="assets/images/profile/alumnos-08.png" alt="logo" />
                                     </Typography>
                         </Typography>
-                        <Typography variant="overline" display="block" className="items-center justify-center p-32 text-center">
+
+                   {/*      <div className="p-24">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                className="w-full"
+                                onClick={ev => dispatch(handleClickOpen())}
+                            >
+                            Nuevo Integrante
+						</Button>
+                        </div> */}
+                          
+                        {/* <Typography variant="overline" display="block" className="items-center justify-center p-32 text-center">
                         <Fab
                             onClick={handleBack}
                             variant="extended"
@@ -197,7 +231,7 @@ export default function HorizontalLabelPositionBelowStepper() {
                             aria-label="add"
                             className={classes.margin}
                         > <Icon>arrow_left</Icon> Regresar
-                     </Fab> </Typography>
+                     </Fab> </Typography> */}
                     </div>
                 ) : (
                         <div>
@@ -235,7 +269,7 @@ export default function HorizontalLabelPositionBelowStepper() {
                                     {getStepTexto(activeStep)}
                                 </Typography>
                             </span>
-                            <Typography className={classes.instructionsform}>
+                            <Typography component="div" className={classes.instructionsform}>
                                 {getStepContent(activeStep)}
                             </Typography>
 

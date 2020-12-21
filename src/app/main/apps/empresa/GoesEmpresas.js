@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
@@ -33,8 +32,8 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
-        <Grid item xs={5}>
+         <Grid component="div" container spacing={2}>
+          <Grid component="div" item xs={5}>
           <div className="flex">
             <div className="min-w-44 pt-20">
               <Icon color="action">assignment_turned_in</Icon>
@@ -146,9 +145,7 @@ export default function CenteredGrid() {
             </FormControl>
         </Grid>
       </Grid>
-      <Typography color="textSecondary" variant="body2">
         <Box component="span" m={5}> </Box>
-      </Typography>
     </div>
   );
 }
