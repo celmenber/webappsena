@@ -6,8 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import React, { useState } from 'react';
 import Typography from '@material-ui/core/Typography';
 import FuseAnimate from '@fuse/core/FuseAnimate';
-import ActivosEmpresa from './ActivosEmpresa';
-import ListaActivosEmpresa from './ListaActivosEmpresa';
+/* import ActivosEmpresa from './ActivosEmpresa';
+import ListaActivosEmpresa from './ListaActivosEmpresa'; */
 import ProductoEmpresa from './ProductoEmpresa';
 import ListaProductoEmpresa from './ListaProductoEmpresa';
 import ProveedorEmpresa from './ProveedorEmpresa';
@@ -46,14 +46,13 @@ function CardedFullWidthTabbedSample() {
                     scrollButtons="off"
                     className="w-full h-64"
                 >
-                    <Tab className="h-64" label="Activos de la Empresa" />
                     <Tab className="h-64" label="Productos de la Empresa" />
                     <Tab className="h-64" label="Proveedores de la Empresa" />
                 </Tabs>
             }
             content={
                 <div className="p-24">
-                    {selectedTab === 0 && (
+               {/*      {selectedTab === 0 && (
                         <div>
                             <h3 className="mb-16">Vamos a crear los Activos de la Empresa</h3>
                             <ActivosEmpresa />
@@ -64,8 +63,8 @@ function CardedFullWidthTabbedSample() {
                             </FuseAnimate>
                             <ListaActivosEmpresa />
                         </div>
-                    )}
-                    {selectedTab === 1 && (
+                    )} */}
+                    {selectedTab === 0 && (
                         <div>
                             <h3 className="mb-16">Vamos a crear los Productos o servicios de la Empresa</h3>
                             <ProductoEmpresa />
@@ -77,7 +76,7 @@ function CardedFullWidthTabbedSample() {
                             <ListaProductoEmpresa/>
                         </div>
                     )}
-                    {selectedTab === 2 && (
+                    {selectedTab === 1 && (
                         <div>
                             <h3 className="mb-16">Vamos a crear Proveedores de la Empresa</h3>
                             <ProveedorEmpresa />

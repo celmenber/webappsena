@@ -13,35 +13,55 @@ const navigationConfig = [
 	},
 	{
 		id: 'GestionGAES',
-		title: 'Gestion Socios',
-		translate: 'Gestion Socios',
+		title: 'Gestion GAES',
+		translate: 'Gestion GAES',
 		type: 'item',
 		icon: 'group',
 		url: '/apps/gestiongaes'
 	},
 	{
 		id: 'GestionTercero',
-		title: 'Gestion Tercero',
-		translate: 'Gestion Tercero',
+		title: 'Terceros',
+		translate: 'Terceros',
 		type: 'item',
 		icon: 'person_pin',
 		url: '/apps/gestiontercero'
 	},
 	{
 		id: 'crearempresa',
-		title: 'Creacion Empresa',
-		translate: 'Creacion Empresa',
+		title: 'Creación Empresa',
+		translate: 'Creación Empresa',
 		type: 'item',
 		icon: 'business',
 		url: '/apps/empresa'
 	},
 	{
 		id: 'Contable',
-		title: 'Gestión Contable',
-		translate: 'Gestión Contable',
+		title: 'Proceso Contable',
+		translate: 'Proceso Contable',
 		type: 'item',
 		icon: 'assessment',
 		url: '/apps/academy/courses'
+	},
+	{
+		id: 'gempresa',
+		title: 'Gestión Empresa',
+		translate: 'Gestión Empresa',
+		type: 'item',
+		icon: 'all_inbox',
+		url: '/apps/scrumboard'
+	},
+	{
+		type: 'divider',
+		id: 'divider-1'
+	},
+	{
+		id: 'configuraciogeneral',
+		title: 'Configuración',
+		translate: 'Configuración',
+		type: 'item',
+		icon: 'settings',
+		url: '/apps/dashboards/project'
 	},
 
 	/* {
@@ -71,7 +91,7 @@ const navigationConfig = [
 		]
 	}, */
 
-	{
+/* 	{
 		id: 'gContable',
 		title: 'Gestión Empresa',
 		type: 'collapse',
@@ -102,7 +122,7 @@ const navigationConfig = [
 				url: '/apps/gestionempresa'
 			},
 		]
-	},
+	}, */
 	
 ];
 

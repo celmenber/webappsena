@@ -20,7 +20,7 @@ import SwipeableViews from 'react-swipeable-views';
 import reducer from '../store';
 import { getCourse, updateCourse } from '../store/courseSlice';
 
-import TipoEmpresa from '../../empresa/TipoEmpresas';
+import TipoEmpresa from '../../empresa/DocEmpresas';
 
 const useStyles = makeStyles(theme => ({
 	stepLabel: {

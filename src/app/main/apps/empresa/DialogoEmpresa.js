@@ -4,19 +4,21 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
+//import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
+//import Typography from '@material-ui/core/Typography';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function AlertDialogSlide() {
-    const [open, setOpen] = React.useState(false);
-   
-     const handleClickOpen = () => {
+    const [open, setOpen] = React.useState(true);
+    const [fullWidth] = React.useState(true);
+    const [maxWidth] = React.useState('xs');
+    /*  const handleClickOpen = () => {
         setOpen(true);
-    }; 
+    };  */
 
     const handleClose = () => {
         setOpen(false);
@@ -24,10 +26,9 @@ export default function AlertDialogSlide() {
     
     return (
         <div>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Slide in alert dialog
-           </Button>
             <Dialog
+                fullWidth={fullWidth}
+                maxWidth={maxWidth}
                 open={open}
                 TransitionComponent={Transition}
                 keepMounted
@@ -35,20 +36,28 @@ export default function AlertDialogSlide() {
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle id="alert-dialog-slide-title">{"Use Google's location service?"}</DialogTitle>
+               {/*  <DialogTitle id="alert-dialog-slide-title">{"Use Google's location service?"}</DialogTitle> */}
                 <DialogContent>
-                    <DialogContentText id="alert-dialog-slide-description">
-                        Let Google help apps determine location. This means sending anonymous location data to
-                        Google, even when no apps are running.
+                    <DialogContentText variant="div" id="alert-dialog-slide-description" className="MuiCardContent-root flex flex-col items-center">
+                        <img className="w-256" src="assets/images/profile/alumnos-08.png" alt="logo" />
+                        <h1 className="MuiCardContent-root flex flex-col items-center">¡Felicidades!</h1>
+                        
+                       {/*  <Typography variant="div" display="block" className="MuiCardContent-root flex flex-col items-center">
+                            <img className="w-256" src="assets/images/profile/alumnos-08.png" alt="logo" />
+                            <div>
+                               ¡Felicidades!
+                            </div>
+                        </Typography> */}
+                        <div>
+                            Has crado tu empresa  ahora podras realizar operaciones contables y comerciales.
+                            </div>
+                        
           </DialogContentText>
-                </DialogContent>
-                <DialogActions>
+     </DialogContent>
+                <DialogActions className="MuiCardContent-root flex flex-col items-center justify-center text-center">
                     <Button onClick={handleClose} color="primary">
-                        Disagree
+                        Iniciar OPeraciones
                      </Button>
-                    <Button onClick={handleClose} color="primary">
-                        Agree
-                  </Button>
                 </DialogActions>
             </Dialog>
         </div>

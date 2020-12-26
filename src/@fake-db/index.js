@@ -3,6 +3,8 @@ import './db/auth-db';
 import './db/project-dashboard-db';
 import './db/contacts-db';
 import mock from './mock';
+import './db/scrumboard-db';
+import './db/profile-db';
 
 /*
 import './db/analytics-dashboard-db';

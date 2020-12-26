@@ -67,11 +67,12 @@ class JwtService extends FuseUtils.EventEmitter {
 					}
 				})
 				.then(response => {
-					
 					if (response.data.user) {
 						this.setSession(response.data.access_token);
 						resolve(response.data.user);
 						sessionStorage.setItem('jwt_access_admin', response.data.user.uuid);
+						sessionStorage.setItem('jwt_access_role', response.data.user.role);
+						sessionStorage.setItem('jwt_access_data', JSON.stringify(response.data.user.data));
 					} else {
 						reject(response.data.error);
 					}

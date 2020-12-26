@@ -66,8 +66,6 @@ function ProjectDashboardApp(props) {
 		menuEl: null
 	}); */
 
-
-
 	useEffect(() => {
 		dispatch(getWidgets());
 		dispatch(getProjects());
@@ -76,7 +74,10 @@ function ProjectDashboardApp(props) {
 	function handleChangeTab(event, value) {
 		setTabValue(value);
 	}
-
+	function userpref() {
+		let vecuser = JSON.parse(sessionStorage.getItem("jwt_access_data"))
+		return vecuser.displayName
+	}
 /* 	function handleChangeProject(id) {
 		setSelectedProject({
 			id,
@@ -114,7 +115,8 @@ function ProjectDashboardApp(props) {
 				<div className="flex flex-col justify-between flex-1 px-24 pt-24">
 					<div className="flex justify-between items-start">
 						<Typography className="py-0 sm:py-24 text-24 md:text-32" variant="h4">
-							Bienvenido Celso Mendoza
+							
+							Bienvenido {userpref()}
 						</Typography>
 						<Hidden lgUp>
 							<IconButton

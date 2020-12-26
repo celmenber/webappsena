@@ -10,7 +10,7 @@ import Icon from '@material-ui/core/Icon';
 //import clsx from 'clsx';
 import Fab from '@material-ui/core/Fab';
 import GoesEmpresa from './GoesEmpresas';
-import TipoEmpresa from './TipoEmpresas';
+import DocEmpresas from './DocEmpresas';
 import NombreEmpresa from './NombreEmpresas';
 import DatosEmpresa from './DatosEmpresas';
 import DefinicionEmpresa from './DefinicionEmpresas';
@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
 function getSteps() {
     return [
         'Crear GAES',
-        '¿ Que Tipo de Empesa quieres ?',
         '¿ Como se llamará la Empresa ?',
         '¿ Cuales son los dato de contacto de la Empresa ?',
         '¿ Es necesario definir quien es la Empresa y hacia donde va ?',
         '¿ Ahora vamos a crear el modelo de negocio de la Empresa ?',
+        '¿ Documento constitucion Empresa ?',
         '¿ solo falta el logotipo de la Empresa ?',
     ];
 }
@@ -65,15 +65,15 @@ function getSteps() {
         case 0:
             return <GoesEmpresa />
         case 1:
-            return <TipoEmpresa />
-        case 2:
             return <NombreEmpresa />
-        case 3:
+        case 2:
             return <DatosEmpresa />
-        case 4:
+        case 3:
             return <DefinicionEmpresa />
-        case 5:
+        case 4:
             return <ModelonegEmpresa />
+        case 5:
+            return <DocEmpresas />
         case 6:
             return <LogoEmpresa />
         default:
@@ -86,15 +86,15 @@ function getStepTexto(stepIndex) {
         case 0:
             return '¿ Ingresa los datos de cada Estudiante ?';
         case 1:
-            return '¿ Que Tipo de Empesa quieres ?';
-        case 2:
             return '¿ Como se llamará la Empresa ?';
-        case 3:
+        case 2:
             return '¿ Cuales son los dato de contacto de la Tonly S.A.S ?';
-        case 4:
+        case 3:
             return '¿ Es necesario definir quien es Tonly S.A.S y hacia donde va ?';
-        case 5:
+        case 4:
             return '¿ Ahora vamos a crear el modelo de negocio de Tonly S.A.S ?';
+        case 5:
+            return '¿ por ultimo vamos a cargar los soporte constitucion de tu Empresa  ?';
         case 6:
             return '¿ solo falta el logotipo de Tonly S.A.S ?';
         default:
@@ -129,15 +129,15 @@ function getStepImg(stepIndex) {
         case 0:
             return 'alumnos-01';
         case 1:
-            return 'alumnos-02';
-        case 2:
             return 'alumnos-03';
-        case 3:
+        case 2:
             return 'alumnos-04';
-        case 4:
+        case 3:
             return 'alumnos-05';
-        case 5:
+        case 4:
             return 'alumnos-06';
+        case 5:
+            return 'alumnos-02';
         case 6:
             return 'alumnos-07';
         default:
@@ -210,28 +210,6 @@ export default function HorizontalLabelPositionBelowStepper() {
                                     <img className="w-256" src="assets/images/profile/alumnos-08.png" alt="logo" />
                                     </Typography>
                         </Typography>
-
-                   {/*      <div className="p-24">
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                className="w-full"
-                                onClick={ev => dispatch(handleClickOpen())}
-                            >
-                            Nuevo Integrante
-						</Button>
-                        </div> */}
-                          
-                        {/* <Typography variant="overline" display="block" className="items-center justify-center p-32 text-center">
-                        <Fab
-                            onClick={handleBack}
-                            variant="extended"
-                            size="medium"
-                            color="primary"
-                            aria-label="add"
-                            className={classes.margin}
-                        > <Icon>arrow_left</Icon> Regresar
-                     </Fab> </Typography> */}
                     </div>
                 ) : (
                         <div>

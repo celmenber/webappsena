@@ -4,7 +4,7 @@ import AcademyAppConfig from './academy/AcademyAppConfig';
 import terceroAppConfig from './gestiontercero/ContactsAppConfig';
 import gaesAppConfig from './gestiongaes/ContactsAppConfig';
 import ProjectDashboardAppConfig from './dashboards/project/ProjectDashboardAppConfig';
-
+import ScrumboardAppConfig from './scrumboard/ScrumboardAppConfig';
 
 /* import CalendarAppConfig from './calendar/CalendarAppConfig';
 import ChatAppConfig from './chat/ChatAppConfig';
@@ -24,7 +24,8 @@ const appsConfigs = [
 	AcademyAppConfig,
 	gstionempresaAppConfig,
 	terceroAppConfig,
-	gaesAppConfig
+	gaesAppConfig,
+	ScrumboardAppConfig
 	
 
 /* 	AcademyAppConfig,
