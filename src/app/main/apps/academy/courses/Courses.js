@@ -89,6 +89,7 @@ function Courses(props) {
 	} */
 
 	function buttonStatus(course) {
+		
 		switch (course.activeStep) {
 			case course.totalSteps:
 				return 'COMPLETADO';

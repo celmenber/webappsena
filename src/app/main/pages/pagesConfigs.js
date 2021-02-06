@@ -2,6 +2,7 @@
 import Error404PageConfig from './errors/404/Error404PageConfig';
 import Error500PageConfig from './errors/500/Error500PageConfig';
 import ProfilePageConfig from './profile/ProfilePageConfig';
+import MenuContabilidadeConfig from './menucontable/MenucontablePageConfig';
 
 
 /* import ForgotPassword2PageConfig from './auth/forgot-password-2/ForgotPassword2PageConfig';
@@ -19,7 +20,8 @@ import ResetPasswordPageConfig from './auth/reset-password/ResetPasswordPageConf
 const pagesConfigs = [
 	Error404PageConfig,
 	Error500PageConfig,
-	ProfilePageConfig
+	ProfilePageConfig,
+	MenuContabilidadeConfig
 
 	/* LoginPageConfig,
 	ForgotPasswordPageConfig,

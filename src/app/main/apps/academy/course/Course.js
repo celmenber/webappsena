@@ -117,7 +117,6 @@ function Course(props) {
 											{console.log(step.id)}
 										<TipoEmpresa />
 										</Paper>
-										{/* <TipoEmpresa /> */}
 									</div>
 		
 								))}

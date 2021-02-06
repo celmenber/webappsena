@@ -20,14 +20,6 @@ const navigationConfig = [
 		url: '/apps/gestiongaes'
 	},
 	{
-		id: 'GestionTercero',
-		title: 'Terceros',
-		translate: 'Terceros',
-		type: 'item',
-		icon: 'person_pin',
-		url: '/apps/gestiontercero'
-	},
-	{
 		id: 'crearempresa',
 		title: 'Creación Empresa',
 		translate: 'Creación Empresa',
@@ -38,10 +30,10 @@ const navigationConfig = [
 	{
 		id: 'Contable',
 		title: 'Proceso Contable',
-		translate: 'Proceso Contable',
+		translate: 'Gestión Contable',
 		type: 'item',
 		icon: 'assessment',
-		url: '/apps/academy/courses'
+		url: '/pages/menucontable'
 	},
 	{
 		id: 'gempresa',
@@ -63,7 +55,14 @@ const navigationConfig = [
 		icon: 'settings',
 		url: '/apps/dashboards/project'
 	},
-
+	{
+		id: 'GestionTercero',
+		title: 'Terceros',
+		translate: 'Terceros',
+		type: 'item',
+		icon: 'person_pin',
+		url: '/apps/gestiontercero'
+	},
 	/* {
 		id: 'Contable',
 		title: 'Gestión Contable',
