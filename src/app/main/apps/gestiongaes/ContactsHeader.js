@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectMainTheme } from 'app/store/fuse/settingsSlice';
 import { setContactsSearchText } from './store/contactsSlice';
 
-function ContactsHeader(props) {
+function ContactsHeader(props) { 
 	const dispatch = useDispatch();
 	const searchText = useSelector(({ contactsApp }) => contactsApp.contacts.searchText);
 	const mainTheme = useSelector(selectMainTheme);
